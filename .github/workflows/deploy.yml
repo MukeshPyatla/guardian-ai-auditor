@@ -1,0 +1,38 @@
+name: Deploy Guardian AI App to Hugging Face Spaces
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          echo "PYTHONPATH=$PYTHONPATH:$(pwd)/src" >> $GITHUB_ENV
+      - name: Set up W&B
+        run: wandb login ${{ secrets.WANDB_API_KEY }}
+        env:
+          WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
+      - name: Run Federated Learning Simulation (for W&B logging)
+        run: python src/orchestrate_fl_gh_actions.py
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git remote add space https://huggingface.co/spaces/${{ github.repository }} || true
+          git push --force space main
