@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+
+# Operating System Files
+.DS_Store
+
+# Specific to this project - sensitive data simulation
+data/synthetic/
+wandb/
