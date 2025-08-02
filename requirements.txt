@@ -3,7 +3,6 @@ numpy
 faker
 scikit-learn
 streamlit
-flower
 flwr
 phe
 Pillow
