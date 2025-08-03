@@ -220,5 +220,5 @@ elif page_selection == "Zero-Trust Principles":
     * **Privacy & Security by Design:** Built-in from the ground up.
     * **Fairness (Conceptual):** By training on aggregated knowledge, models can potentially be more robust to bias in individual client datasets (though advanced fairness metrics are out of scope for this demo).
     * **Transparency & Explainability:** Through the layered architecture visualization and the conceptual audit trail.
-    * **Accountability:** Clear logging of decryption events and MLOps processes.
+    * **Accntability:** Clear logging of decryption events and MLOps processes.
     """)
