@@ -48,7 +48,6 @@ if page_selection == "Overview":
     st.subheader("Architecture at a Glance:")
     st.image("https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/guardian-ai-auditor/main/docs/architecture_diagram.png",
              caption="Conceptual Guardian AI Zero-Trust Architecture")
-    st.write("*(This diagram should be created by you and uploaded to your GitHub `docs/` folder)*")
     st.markdown("---")
     st.info("Navigate to 'Layered Architecture Demo' in the sidebar to see the Guardian AI in action!")
 
