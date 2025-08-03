@@ -199,19 +199,14 @@ elif page_selection == "Zero-Trust Principles":
     Every request and data interaction is verified and secured.
     #### 1. Eliminate Implicit Trust
     * **How Guardian AI does it:** Raw data is never trusted once it leaves its local enclave. It's immediately encrypted (HE) or handled via privacy-preserving mechanisms (FL). No network segment is inherently trusted.
-    * **MLOps Application:** All data transfers (simulated) are conceptualized as encrypted channels.
     #### 2. Verify Explicitly
     * **How Guardian AI does it:** While we don't have user authentication in this demo, conceptually, decryption (Layer 3) would require explicit authorization and identity verification. Each client in FL verifies the global model it receives.
-    * **MLOps Application:** Future integration with identity and access management (IAM) for model access and decryption keys.
     #### 3. Least Privilege Access
     * **How Guardian AI does it:** Clients only access their own raw data. The FL server only sees encrypted model updates, not raw data. Analysts only see aggregated, decrypted insights, not individual sensitive data points.
-    * **MLOps Application:** Granular access controls for different stages of the MLOps pipeline and model artifacts.
     #### 4. Assume Breach Mentality
     * **How Guardian AI does it:** Even if a layer is compromised, the data at that layer is still encrypted or in a privacy-preserving form, minimizing damage.
-    * **MLOps Application:** Robust logging (conceptual audit trail) and continuous monitoring for anomalous activities within the pipeline.
     #### 5. Continuously Monitor & Validate
     * **How Guardian AI does it:** Federated Learning continually updates the global model. Weights & Biases tracks performance across rounds.
-    * **MLOps Application:** Automated validation tests, performance monitoring (W&B), and alerting for model drift or privacy budget exhaustion.
     ---
     st.subheader("Security Compliance & Responsible AI")
     st.markdown("""
