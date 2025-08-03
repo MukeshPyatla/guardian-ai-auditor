@@ -3,26 +3,21 @@ from phe import paillier
 public_key_global, private_key_global = None, None
 
 def generate_global_paillier_keys():
-    """Generates global Paillier public and private keys."""
     global public_key_global, private_key_global
     if public_key_global is None or private_key_global is None:
         public_key_global, private_key_global = paillier.generate_paillier_keypair()
     return public_key_global, private_key_global
 
 def encrypt_value(value, public_key):
-    """Encrypts a single numerical value."""
     return public_key.encrypt(value)
 
 def decrypt_value(encrypted_value, private_key):
-    """Decrypts a single encrypted numerical value."""
     return private_key.decrypt(encrypted_value)
 
 def homomorphic_add_values(encrypted_val1, encrypted_val2):
-    """Performs homomorphic addition on two encrypted values."""
     return encrypted_val1 + encrypted_val2
 
 def homomorphic_multiply_by_scalar(encrypted_val, scalar):
-    """Performs homomorphic multiplication by a scalar."""
     return encrypted_val * scalar
 
 if __name__ == "__main__":
