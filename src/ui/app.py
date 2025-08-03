@@ -6,17 +6,6 @@ import time
 import os
 import sys
 import random
-# This is a wrapper for the main Streamlit application
-# It's required for Hugging Face Spaces to find and run the app.
-import sys
-import os
-
-# Add the parent directory to the Python path to enable module imports
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-
-# Now, import and run the main app
-from src.ui.app import *
-
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -223,7 +212,7 @@ elif page_selection == "Zero-Trust Principles":
     #### 5. Continuously Monitor & Validate
     * **How Guardian AI does it:** Federated Learning continually updates the global model. Weights & Biases tracks performance across rounds.
     * **MLOps Application:** Automated validation tests, performance monitoring (W&B), and alerting for model drift or privacy budget exhaustion.
-    ...
+    ---
     st.subheader("Security Compliance & Responsible AI")
     st.markdown("""
     By implementing these principles and privacy-preserving techniques, Guardian AI aligns with key compliance standards:
