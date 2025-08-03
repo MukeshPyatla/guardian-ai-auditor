@@ -78,7 +78,7 @@ def generate_synthetic_sensor_data(num_points=200, client_id="client_0"):
 
     df = pd.DataFrame({
         "client_id": client_id,
-        "timestamp": pd.to_datetime(pd.date_range("2024-01-01", periods=num_points, freq="H")),
+        "timestamp": pd.to_datetime(pd.date_range("2024-01-01", periods=num_points, freq="h")),
         "sensor_value": data,
         "true_anomaly_status": labels
     })

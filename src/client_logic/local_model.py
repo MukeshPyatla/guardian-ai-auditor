@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import StandardScaler
 from common.model_definition import TextComplianceModel, SensorAnomalyModel
-from client_logic.he_utils import generate_global_paillier_keys, encrypt_value, public_key_global
+from client_logic.he_utils import generate_global_paillier_keys, encrypt_value
 import random
 import os
 
@@ -91,9 +91,9 @@ def get_local_insights(client_id, text_df, image_labels_df, sensor_df):
     # For demo, we'll only federate text model parameters for FL.
     # Other insights (risk scores) can be aggregated via conceptual HE sums.
 
-    encrypted_text_risk = encrypt_value(float(text_risk_score), public_key_global)
-    encrypted_image_risk = encrypt_value(float(image_risk_score), public_key_global)
-    encrypted_sensor_risk = encrypt_value(float(sensor_anomaly_rate), public_key_global)
+    encrypted_text_risk = encrypt_value(float(text_risk_score), public_key)
+    encrypted_image_risk = encrypt_value(float(image_risk_score), public_key)
+    encrypted_sensor_risk = encrypt_value(float(sensor_anomaly_rate), public_key)
 
     return {
         "text_model_params": text_model.get_parameters(), # Parameters to be federated
