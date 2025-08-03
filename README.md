@@ -27,8 +27,6 @@ Our MLOps pipeline is built on a layered architecture that enforces privacy and 
 
 ### How to Run the Project
 
-* **Live Demo:** [https://huggingface.co/spaces/YOUR_GITHUB_USERNAME/guardian-ai-auditor-demo](https://huggingface.co/spaces/YOUR_GITHUB_USERNAME/guardian-ai-auditor-demo)
+* **Live Demo:** [[(https://huggingface.co/spaces/MukeshPyatla/guardian_ai_auditor_V1)]]
 * **GitHub Repository:** [https://github.com/MukeshPyatla/guardian-ai-auditor](https://github.com/MukeshPyatla/guardian-ai-auditor)
-* **W&B Project Dashboard:** [https://wandb.ai/YOUR_WANDB_USERNAME/guardian-ai-fl](https://wandb.ai/YOUR_WANDB_USERNAME/guardian-ai-fl)
-
-**(Remember to replace the placeholder URLs with your actual information.)**
+* **W&B Project Dashboard:** (https://wandb.ai/mukeshyadav9989-/guardian-ai-fl/workspace?nw=nwusermukeshyadav9989))
