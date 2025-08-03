@@ -34,7 +34,5 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          # Add a remote named 'space' with the correct URL, including the token for authentication
-          git remote add space https://oauth2:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/${{ github.repository }} || true
-          # Push the changes to the 'space' remote
-          git push --force space main
+          git remote set-url origin https://oauth2:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/MukeshPyatla/guardian-ai-auditor-demo
+          git push --force origin main
