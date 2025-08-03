@@ -13,5 +13,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
+# Create a config file to fix the permission error
+RUN mkdir -p /root/.streamlit && \
+    echo "[general]" > /root/.streamlit/config.toml && \
+    echo "disableWatchdogWarning = true" >> /root/.streamlit/config.toml
+
 # Define the command to run your application
 CMD ["streamlit", "run", "src/ui/app.py"]
