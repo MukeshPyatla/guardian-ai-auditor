@@ -6,6 +6,8 @@ This project, "Guardian AI," is a proof-of-concept MLOps pipeline designed to so
 
 The system processes multi-modal data (text, images, and sensor data) through a series of privacy-preserving layers, delivering high-utility insights without ever exposing the underlying sensitive details.
 
+**🚀 Live Demo:** [Guardian AI Zero-Trust Auditor](https://mukeshpyatla-guardian-ai-auditor-srcuiapp-c6jflx.streamlit.app/)
+
 ### Architecture
 
 Our MLOps pipeline is built on a layered architecture that enforces privacy and security at every stage.
@@ -25,8 +27,16 @@ Our MLOps pipeline is built on a layered architecture that enforces privacy and 
 * **CI/CD Automation:** Built a GitHub Actions workflow that automatically runs the FL simulation, logs results to **Weights & Biases (W&B)**, and deploys the application to **Hugging Face Spaces**.
 * **Experiment Tracking:** Used **W&B** to monitor the performance of the federated model across training rounds on a public, non-sensitive dataset.
 
+### Deployment
+
+The application is deployed on **Streamlit Cloud** with Python 3.13 support:
+- **Main Entry Point:** `streamlit_app.py`
+- **Core Application:** `src/ui/app.py`
+- **Configuration:** `.streamlit/config.toml`
+- **Dependencies:** `requirements.txt` with Python 3.13 compatible versions
+
 ### How to Run the Project
 
-* **Live Demo:** [[(https://huggingface.co/spaces/MukeshPyatla/guardian_ai_auditor_V1)]]
+* **Live Demo:** [🚀 Guardian AI Zero-Trust Auditor](https://mukeshpyatla-guardian-ai-auditor-srcuiapp-c6jflx.streamlit.app/)
 * **GitHub Repository:** [https://github.com/MukeshPyatla/guardian-ai-auditor](https://github.com/MukeshPyatla/guardian-ai-auditor)
-* **W&B Project Dashboard:** (https://wandb.ai/mukeshyadav9989-/guardian-ai-fl/workspace?nw=nwusermukeshyadav9989))
+* **W&B Project Dashboard:** [https://wandb.ai/mukeshyadav9989-/guardian-ai-fl/workspace?nw=nwusermukeshyadav9989](https://wandb.ai/mukeshyadav9989-/guardian-ai-fl/workspace?nw=nwusermukeshyadav9989)
